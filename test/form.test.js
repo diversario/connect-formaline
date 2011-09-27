@@ -4,15 +4,16 @@
  */
 
 var connect = require('connect'),
-    form = require('./../index');
+    form = require('./../index'),
+    EE = require('events').EventEmmiter;
 
 // Test server
 
 var server = connect.createServer(
-    form(),
+    form({}),
     function(req, res, next){
         if (req.form) {
-            req.form.complete(function(err, fields, files){
+            req.form.parse(function(err, fields, files){
                 res.writeHead(200, {});
                 if (err) res.write(JSON.stringify(err.message));
                 res.write(JSON.stringify(fields));
@@ -129,7 +130,7 @@ exports['test urlencoded'] = function(assert){
 exports['test bodyDecoder'] = function(assert){
     var server = connect.createServer(
         connect.bodyParser(),
-        form(),
+        form({}),
         function(req, res){
             res.writeHead(200, {});
             res.end(JSON.stringify(req.body));
