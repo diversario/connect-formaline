@@ -9,7 +9,7 @@ via npm (not submitted yet):
 
 	$ npm install connect-formaline
 
-## Example (invalid)
+## Example
 
     var form = require('connect-form');
     
