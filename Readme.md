@@ -1,11 +1,10 @@
-
 # Connect Formaline
 
 Connect Formaline is a multipart / urlencoded form parsing middleware utilizing [node-formaline](https://github.com/rootslab/formaline).
 
 ## Installation
 
-via npm (not submitted yet):
+via npm:
 
 	$ npm install connect-formaline
 
