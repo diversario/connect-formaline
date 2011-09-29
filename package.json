@@ -1,8 +1,8 @@
 {
   "name": "connect-formaline",
   "description": "urlencoded / multipart form parsing middleware for Connect",
-  "version": "0.0.1",
-  "author": "Ilya Shaisultanov <ilya.shaisultanov@gmail.com>",
+  "version": "0.0.2",
+  "author": "diversario <ilya.shaisultanov@gmail.com>",
   "dependencies": { "formaline": ">= 0.6.4" },
   "main": "./index.js",
   "engines": { "node": ">= 0.4.0" }
